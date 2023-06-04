@@ -1,0 +1,58 @@
+$strongCyan: hsl(172, 67%, 45%);
+$darkCyan: hsl(183, 100%, 15%);
+$darkGravishCyan: hsl(186, 14%, 43%);
+$gravishCyan: hsl(184, 14%, 56%);
+$lightGravishCyan: hsl(185, 41%, 84%);
+$veryLightGravishCyan: hsl(189, 41%, 97%);
+$white: hsl(0, 0%, 100%);
+
+$mobile: 375px;
+$desktop: 1440px;
+
+
+
+
+@font-face {
+    font-family: SpaceMono;
+    src: url(../font/SpaceMono-Regular.ttf);
+}
+
+@font-face {
+    font-family: SpaceMonoBold;
+    src: url(../font/SpaceMono-Bold.ttf);
+}
+
+$font: SpaceMonoBold;
+$fontBold: SpaceMono;
+
+body{
+    overflow: hidden;
+}
+
+#root{
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+}
+.app{
+    display: grid;
+    align-items: center;
+    height: 100%;
+    width: 80%;
+    justify-content: center;
+    margin: 0 auto;
+}
+.input:active, .input:focus{
+    border: 1px solid $strongCyan;
+    outline: 1px solid $strongCyan;
+}
+
+.input:active:invalid, .input:focus:invalid{
+    border: 1px solid red;
+    outline: 1px solid red;
+}
+
+.home{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}

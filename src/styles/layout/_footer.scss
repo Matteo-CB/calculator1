@@ -1,0 +1,13 @@
+@import './settings';
+
+.attribution { 
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 1%;
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: $darkCyan; 
+}

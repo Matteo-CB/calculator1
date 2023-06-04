@@ -1,0 +1,25 @@
+@import "./settings";
+
+.dollar{
+    position: relative;
+    &::before{
+        content: "";
+        background: url(../icon/icon-dollar.svg);
+        height: 100%;
+        width: 100%;
+        position: absolute;
+    }
+}
+
+.person{
+    position: relative;
+    &::before{
+        content: "";
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  width: 20px;
+  background: url("../icon/icon-dollar.svg") center / contain no-repeat;
+    }
+}
