@@ -3,56 +3,223 @@ $darkCyan: hsl(183, 100%, 15%);
 $darkGravishCyan: hsl(186, 14%, 43%);
 $gravishCyan: hsl(184, 14%, 56%);
 $lightGravishCyan: hsl(185, 41%, 84%);
-$veryLightGravishCyan: hsl(189, 41%, 97%);
+$veryLightGravishCyan: hsl(180, 41%, 93%);
 $white: hsl(0, 0%, 100%);
 
 $mobile: 375px;
 $desktop: 1440px;
 
-
-
-
 @font-face {
-    font-family: SpaceMono;
-    src: url(../font/SpaceMono-Regular.ttf);
+  font-family: SpaceMono;
+  src: url(../font/SpaceMono-Regular.ttf);
 }
 
 @font-face {
-    font-family: SpaceMonoBold;
-    src: url(../font/SpaceMono-Bold.ttf);
+  font-family: SpaceMonoBold;
+  src: url(../font/SpaceMono-Bold.ttf);
 }
 
 $font: SpaceMonoBold;
 $fontBold: SpaceMono;
 
-body{
-    overflow: hidden;
+body {
+  font-family: $font;
+  overflow: auto;
+  background: $lightGravishCyan;
+  .custom {
+    &::placeholder {
+      font-family: $font;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    &{
+        margin: 0;
+        
+    }
+  }
 }
 
-#root{
-    height: 100vh;
-    display: grid;
-    justify-content: center;
-}
-.app{
-    display: grid;
-    align-items: center;
-    height: 100%;
-    width: 80%;
-    justify-content: center;
-    margin: 0 auto;
-}
-.input:active, .input:focus{
-    border: 1px solid $strongCyan;
-    outline: 1px solid $strongCyan;
+#root {
+  height: 100vh;
+  width: none;
+  align-items: center;
+  display: grid;
+  justify-content: center;
+  @media screen and (max-width: 600px) {
+    &{
+        display: block;
+        
+    }
+  }
 }
 
-.input:active:invalid, .input:focus:invalid{
-    border: 1px solid red;
-    outline: 1px solid red;
+
+
+.input:active,
+.input:focus {
+  border: 1px solid $strongCyan;
+  outline: 1px solid $strongCyan;
 }
 
-.home{
+.input:active:invalid,
+.input:focus:invalid {
+  border: 1px solid red;
+  outline: 1px solid red;
+}
+
+
+
+.home {
+  display: grid;
+  height: 55vh;
+  grid-template-columns: 50% 50%;
+  background: $white;
+  border-radius: 30px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 30px 60px;
+  @media screen and (max-width: 600px) {
+    &{
+        width: 100%;
+        height: 80vh;
+        margin-top: 150px;
+        padding: 30px;
+        display: block;
+        
+    }
+  }
+  @media screen and (max-width: 800px) {
+    &{
+        padding: 30px;
+        height: 50;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    &{
+        grid-template-columns: 100%;
+        padding: 0px;
+        padding-bottom: 100px;
+        
+        
+    }
+  }
+
+  input[type="text"]:not(.custom) {
+    background: $veryLightGravishCyan;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: right;
+    font-family: $font;
+    color: $darkCyan;
+    width: 85%;
+    @media screen and (max-width: 800px) {
+        &{
+            width: 75%;
+        }
+      }
+
+    &::placeholder {
+      color: $darkGravishCyan;
+    }
+  }
+.custom{
+    background: $veryLightGravishCyan;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    
+    font-family: $font;
+    color: $darkCyan;
+}
+  form {
+    .custom {
+      text-align: left;
+    }
+  }
+
+  input[type="radio"] {
+    display: none;
+
+    &:checked {
+      + label {
+        background: $strongCyan;
+        color: $darkCyan;
+      }
+    }
+  }
+
+  label {
+    background: $darkCyan;
+    padding: 3px 6px;
+    text-align: center;
+    color: $white;
+    margin: 10px;
+    border-radius: 6px;
+  }
+
+  div {
+    .label {
+      text-align: center;
+      border-radius: 10px;
+      margin: 10px;
+    }
+  }
+
+  .gridradio {
     display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 50% 50%;
+    margin-right: 40px;
+    @media screen and (max-width: 600px) {
+        &{
+            
+            grid-template-rows: 33% 33% 33%;
     grid-template-columns: 50% 50%;
+        }
+      }
+  }
+}
+.selected {
+    background: $strongCyan;
+    color: $darkCyan;
+  }
+
+.result {
+  position: relative;
+  background: $darkCyan;
+  border-radius: 30px;
+  padding: 30px 50px;
+  min-width: 350px;
+  @media screen and (max-width: 1000px) {
+    &{
+        min-width: 250px;
+    }
+  }
+  @media screen and (max-width: 800px) {
+    &{
+        min-width: 150px;
+        padding: 30px;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    &{
+        width: 80%;
+        margin: 0 auto 0 auto;
+        padding: 20px 30px 70px 30px;
+     min-width: none;
+    }
+  }
+  
+}
+.selectip{
+    margin: 40px 0;
+    @media screen and (max-width: 600px) {
+      &{
+          
+       margin: 20px 0;
+      }
+    }
+}
+.person{
+  margin-bottom: 40px;
 }

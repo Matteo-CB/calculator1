@@ -5,11 +5,15 @@ import Footer from "../components/Footer";
 
 const Home = () => {
   return (
-    <div className="home">
-      <Calculator />
-      <Result />
-      <Footer />
-    </div>
+    <>
+     
+        
+      <div className="home">
+        <Calculator />
+        <Result />
+        <Footer />
+      </div>
+    </>
   );
 };
 

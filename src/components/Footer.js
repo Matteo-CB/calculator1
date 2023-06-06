@@ -9,7 +9,7 @@ const Footer = () => {
       </a>
       . Coded by{" "}
       <a href="https://www.instagram.com/livai.byk/" target="_blank">
-        livai.byk
+        Matteo CB
       </a>
     </div>
   );
