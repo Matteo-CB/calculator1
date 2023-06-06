@@ -1,0 +1,49 @@
+@import "./settings";
+
+.calculator{
+    min-width: 400px;
+    h3{
+        font-size: 0.7rem;
+        color: $darkCyan;
+    }
+    @media screen and (max-width: 1000px) {
+        &{
+            min-width: 300px;
+        }
+      }
+      @media screen and (max-width: 800px) {
+        &{
+            min-width: 300px;
+        }
+      }
+      @media screen and (max-width: 600px) {
+        &{
+            padding: 10px 10px 5px 20px;
+         min-width: none;
+        }
+      }
+}
+
+.dollar{
+    position: relative;
+    &::before{
+        content: "";
+        background: url(../icon/icon-dollar.svg);
+        height: 100%;
+        width: 100%;
+        position: absolute;
+    }
+}
+
+.person{
+    position: relative;
+    &::before{
+        content: "";
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  width: 20px;
+  background: url("../icon/icon-dollar.svg") center / contain no-repeat;
+    }
+}
